@@ -1,0 +1,93 @@
+.CalcArea {
+    margin: 1.5rem;
+    /* min-height: 25rem; */
+    max-width: 90vw;
+    /* max-height: 90vw; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    background-color: rgba(10, 16, 107, 0.7);
+    text-align: center;
+    padding: 20px;
+}
+
+.CalcArea img {
+    height: 150px;
+    width: 150px;
+    
+}
+
+.CalcArea p {
+    margin: 5px;
+    padding: 10px;
+    color: var(--secondary-color);
+}
+
+.CalcArea form {
+    text-align: center;
+}
+
+.CalcArea input {
+    border: 2px double var(--primary-color);
+    border-radius: 25px;
+    width: 8rem;
+    background-color: var(--secondary-color);
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-family: inherit;
+    max-width: 95%;
+    outline: none;
+    text-align: center;
+}
+
+.CalcArea form button, .CalcArea .choice {
+    border: 1px solid var(--primary-color);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    background-color: var(--secondary-color);
+    border-radius: 25px;
+    padding: 0.5rem;
+    width: 5rem;
+    cursor: pointer;
+    font-family: inherit;
+    max-width: 95%;
+    outline: none;
+}
+
+.CalcArea .choice {
+    width: 12rem;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.CalcArea .choice:hover {
+    box-shadow: 0 0 20px var(--secondary-color);
+}
+
+
+.CalcArea form button:hover {
+    background-image: linear-gradient(rgba(250, 235, 215, 0.5), rgba(250, 235, 215, 0.7));
+    box-shadow: 0 0 20px var(--secondary-color);
+  }
+
+.CalcArea span {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+}
+
+.CalcArea ::placeholder {
+    color: rgb(6, 107, 107);
+}
+
+.CalcArea ::-ms-input-placeholder {
+    color: rgb(6, 107, 107);
+}
+
+.CalcArea output {
+    border: 2px solid var(--secondary-color);
+}

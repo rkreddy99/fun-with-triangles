@@ -1,0 +1,85 @@
+.TakeQuiz {
+    margin: 1.5rem;
+    max-width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.TakeQuiz .info, .TakeQuiz .output {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin: 5px;
+    padding: 10px;
+}
+
+.TakeQuiz .quiz {
+    width: 32rem;
+    max-width: 80vw;
+    margin: 10px;
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    background-color: rgba(10, 16, 107, 0.7);
+    padding: 20px;
+}
+
+.TakeQuiz .quiz p {
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.TakeQuiz label {
+    margin: 15px;
+    margin-left: 0;
+}
+
+.TakeQuiz input {
+    margin-right: 5px;
+}
+
+.TakeQuiz span {
+    color: var(--secondary-color);
+}
+
+.TakeQuiz form {
+    text-align: center;
+}
+
+.TakeQuiz button {
+    border: 1px solid var(--primary-color);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    background-color: var(--secondary-color);
+    border-radius: 25px;
+    padding: 1rem;
+    max-width: 10vw;
+    cursor: pointer;
+    font-family: inherit;
+    max-width: 95%;
+}
+
+.TakeQuiz button:hover {
+    background-image: linear-gradient(rgba(250, 235, 215, 0.5), rgba(250, 235, 215, 0.7));
+    box-shadow: 0 0 20px var(--secondary-color);
+  }
+
+.TakeQuiz ::placeholder {
+    color: rgb(6, 107, 107);
+}
+
+.TakeQuiz ::-ms-input-placeholder {
+    color: rgb(6, 107, 107);
+}
+
+.TakeQuiz .output {
+    margin-top: 2rem;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+}
