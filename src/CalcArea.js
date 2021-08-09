@@ -12,9 +12,16 @@ function CalcArea() {
     const [choice, setChoice] = useState(null);
 
     function areawithsides() {
-        let s = (a + b + c) / 2
-        let totalArea = s*(s-a)*(s-b)*(s-c) 
-        return totalArea**0.5
+        let c1 = a + b > c
+        let c2 = c + b > a
+        let c3 = a + c > b
+        if (c1 && c2 && c3) {
+            let s = (a + b + c) / 2
+            let totalArea = s*(s-a)*(s-b)*(s-c) 
+            return totalArea**0.5
+        } else {
+            return -1
+        }
     }
 
     function hbarea() {
@@ -35,8 +42,12 @@ function CalcArea() {
         } else if (choice === 3) {
             area = sideanglearea();
         }
-        area = Number((area).toFixed(2))
-        setMsg(`Area of the triangle is ${area} sq. units.`)
+        if (parseInt(area) === -1) {
+            setMsg("Cannot form triangle with given sides :(")
+        } else {
+            area = Number((area).toFixed(2))
+            setMsg(`Area of the triangle is ${area} sq. units.`)
+        }
     }
 
     function setSide(setangle, event) {
