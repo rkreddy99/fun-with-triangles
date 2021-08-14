@@ -19,7 +19,7 @@ function AnglesTriangles() {
     }
 
     function setAngle(setangle, event) {
-        setangle(parseInt(event.target.value))
+        setangle(Number(event.target.value))
     }
 
     return (
@@ -33,6 +33,8 @@ function AnglesTriangles() {
                     placeholder="Angle A"
                     onChange={(event) => setAngle(setA, event)}
                     value={a}
+                    min="0.0001"
+                    step="any"
                     required
                 />
                 <br/>
@@ -43,6 +45,8 @@ function AnglesTriangles() {
                     placeholder="Angle B"
                     onChange={(event) => setAngle(setB, event)}
                     value={b}
+                    min="0.0001"
+                    step="any"
                     required
                 />
                 <br/>
@@ -53,6 +57,8 @@ function AnglesTriangles() {
                     placeholder="Angle C"
                     onChange={(event) => setAngle(setC, event)}
                     value={c}
+                    min="0.0001"
+                    step="any"
                     required
                 />
                 <br/>

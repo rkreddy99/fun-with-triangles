@@ -14,8 +14,8 @@ function CalcHypotenuse() {
         setMsg(`The length of hypotenuse is ${hyp} units.`)
     }
 
-    function setSide(setangle, event) {
-        setangle(parseInt(event.target.value))
+    function setSide(setlength, event) {
+        setlength(Number(event.target.value))
     }
 
     return (
@@ -30,7 +30,8 @@ function CalcHypotenuse() {
                     placeholder="Side a"
                     onChange={(event) => setSide(setA, event)}
                     value={a}
-                    min="1"
+                    min="0.0001"
+                    step="any"
                     required
                 />
                 <br/>
@@ -41,7 +42,8 @@ function CalcHypotenuse() {
                     placeholder="Side b"
                     onChange={(event) => setSide(setB, event)}
                     value={b}
-                    min="1"
+                    min="0.0001"
+                    step="any"
                     required
                 />
                 <br/>

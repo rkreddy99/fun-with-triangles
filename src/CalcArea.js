@@ -50,8 +50,8 @@ function CalcArea() {
         }
     }
 
-    function setSide(setangle, event) {
-        setangle(parseInt(event.target.value))
+    function setParam(setvalue, event) {
+        setvalue(Number(event.target.value))
     }
 
     const choiceStyle = {
@@ -98,9 +98,10 @@ function CalcArea() {
                             choice === 1 ? "height" :
                             choice === 2 ? "side a" : "Angle A"
                         }
-                        onChange={(event) => setSide(setA, event)}
+                        onChange={(event) => setParam(setA, event)}
                         value={a}
-                        min="1"
+                        min="0.0001"
+                        step="any"
                         required
                     />
                     <br/>
@@ -111,9 +112,10 @@ function CalcArea() {
                         placeholder={
                             choice === 1 ? "base" : "side b"
                         }
-                        onChange={(event) => setSide(setB, event)}
+                        onChange={(event) => setParam(setB, event)}
                         value={b}
-                        min="1"
+                        min="0.0001"
+                        step="any"
                         required
                     />
                     <br/>
@@ -122,9 +124,10 @@ function CalcArea() {
                         className="side C"
                         type="number"
                         placeholder="side c"
-                        onChange={(event) => setSide(setC, event)}
+                        onChange={(event) => setParam(setC, event)}
                         value={c}
-                        min="1"
+                        min="0.0001"
+                        step="any"
                         required
                     />}
                     {choice !== 1 && <br/>}
